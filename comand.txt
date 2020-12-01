@@ -1,0 +1,15 @@
+C:\ProgramData\ComposerSetup\bin
+
+composer self-update
+composer create-project laravel/laravel sekolah 7.25.0 --prefer-dist
+cd sekolah
+php artisan serve
+php artisan storage:link
+
+https://docs.spatie.be/laravel-permission/v3/introduction/
+
+composer require spatie/laravel-permission
+php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvider"
+
+php artisan make:seed RolesTableSeeder
+php artisan make:seed PermissionsTableSeeder
